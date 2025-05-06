@@ -9,19 +9,19 @@ services:
       - caddy_data:/data
       - caddy_config:/config
     ports:
-      - "80:80"  # เปิดพอร์ต HTTP
-      - "443:443"  # เปิดพอร์ต HTTPS
-  
+      - "80:80"
+      - "443:443"
+
   nodejs:
     build:
-      context: .
-      dockerfile: Dockerfile  # ใช้ Dockerfile ที่มีอยู่ในโฟลเดอร์นี้
+      context: .  # ใช้ context ของโฟลเดอร์นี้
+      dockerfile: Dockerfile  # ชื่อของไฟล์ Dockerfile
     container_name: nodejs
     working_dir: /app
     volumes:
       - ./app:/app
     ports:
-      - "3000:3000"  # เปิดพอร์ต 3000 สำหรับแอป Node.js
+      - "3000:3000"
 
 volumes:
   caddy_data:
