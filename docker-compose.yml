@@ -15,7 +15,7 @@ services:
   nodejs:
     build:
       context: .  # ใช้ context ของโฟลเดอร์นี้
-      dockerfile: Dockerfile  # ชื่อของไฟล์ Dockerfile
+      dockerfile: Dockerfile  # ชื่อไฟล์ Dockerfile
     container_name: nodejs
     working_dir: /app
     volumes:
