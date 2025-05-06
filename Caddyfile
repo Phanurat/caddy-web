@@ -1,0 +1,4 @@
+# กำหนดโดเมนจาก DuckDNS
+cnp-webchain.duckdns.org {
+  reverse_proxy nodejs:3000  # ส่งคำขอไปที่คอนเทนเนอร์ Node.js ที่พอร์ต 3000
+}
